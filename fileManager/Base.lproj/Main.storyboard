@@ -38,7 +38,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ضع اسم الملف" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kcx-X5-CBt">
                                 <rect key="frame" x="91" y="277" width="232" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="232" id="Ni5-5f-IgP"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="232" id="Ni5-5f-IgP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -46,7 +46,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ضع اسم المجلد" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kNi-F8-evC">
                                 <rect key="frame" x="91" y="225" width="232" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="232" id="Ebx-Or-mlg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="232" id="Ebx-Or-mlg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -67,15 +67,17 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BDb-Ik-PI4" secondAttribute="trailing" constant="159" id="0uP-tl-yEA"/>
                             <constraint firstItem="kNi-F8-evC" firstAttribute="top" secondItem="kcx-X5-CBt" secondAttribute="bottom" constant="-85" id="63O-L9-uYK"/>
                             <constraint firstItem="c8b-ou-Qc0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="129" id="E6w-er-oBV"/>
-                            <constraint firstItem="kcx-X5-CBt" firstAttribute="leading" secondItem="kNi-F8-evC" secondAttribute="leading" id="PN2-0m-4mN"/>
+                            <constraint firstItem="kcx-X5-CBt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kNi-F8-evC" secondAttribute="leading" id="PN2-0m-4mN"/>
                             <constraint firstItem="kNi-F8-evC" firstAttribute="top" secondItem="c8b-ou-Qc0" secondAttribute="bottom" constant="19" id="RGb-MQ-l2m"/>
                             <constraint firstItem="vS2-us-aP9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="THY-Ve-WJG"/>
                             <constraint firstItem="vS2-us-aP9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WBi-ho-xPX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kcx-X5-CBt" secondAttribute="trailing" constant="91" id="ZZa-lE-lbJ"/>
                             <constraint firstItem="BDb-Ik-PI4" firstAttribute="centerX" secondItem="kNi-F8-evC" secondAttribute="centerX" id="fEI-qe-FDJ"/>
                             <constraint firstItem="kcx-X5-CBt" firstAttribute="top" secondItem="c8b-ou-Qc0" secondAttribute="bottom" constant="71" id="g2x-XK-f3p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kNi-F8-evC" secondAttribute="trailing" constant="91" id="iDu-V4-Hf1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vS2-us-aP9" secondAttribute="trailing" constant="123" id="m74-I5-nrD"/>
                             <constraint firstItem="BDb-Ik-PI4" firstAttribute="top" secondItem="kNi-F8-evC" secondAttribute="bottom" constant="82" id="qE7-6n-cKz"/>
+                            <constraint firstItem="c8b-ou-Qc0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="tnI-sL-9Gk"/>
                         </constraints>
                     </view>
                     <connections>
