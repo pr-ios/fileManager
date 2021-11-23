@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fileManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="إنشاء ملف/مجلد" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8b-ou-Qc0">
+                                <rect key="frame" x="226" y="173" width="168" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BDb-Ik-PI4">
+                                <rect key="frame" x="159" y="341" width="96" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="OE1-V9-nDk"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="" image="folder" catalog="system"/>
+                                    <segment title="" image="filemenu.and.selection" catalog="system"/>
+                                </segments>
+                                <connections>
+                                    <action selector="chooseFolderOrFile:" destination="BYZ-38-t0r" eventType="valueChanged" id="21O-q7-waA"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ضع اسم الملف" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kcx-X5-CBt">
+                                <rect key="frame" x="91" y="277" width="232" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="Ni5-5f-IgP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ضع اسم المجلد" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kNi-F8-evC">
+                                <rect key="frame" x="91" y="225" width="232" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="Ebx-Or-mlg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="ضع محتوى الملف" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vS2-us-aP9">
+                                <rect key="frame" x="124" y="413" width="167" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="vNG-cN-swg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c8b-ou-Qc0" secondAttribute="trailing" constant="20" id="0GP-07-huv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BDb-Ik-PI4" secondAttribute="trailing" constant="159" id="0uP-tl-yEA"/>
+                            <constraint firstItem="kNi-F8-evC" firstAttribute="top" secondItem="kcx-X5-CBt" secondAttribute="bottom" constant="-85" id="63O-L9-uYK"/>
+                            <constraint firstItem="c8b-ou-Qc0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="129" id="E6w-er-oBV"/>
+                            <constraint firstItem="kcx-X5-CBt" firstAttribute="leading" secondItem="kNi-F8-evC" secondAttribute="leading" id="PN2-0m-4mN"/>
+                            <constraint firstItem="kNi-F8-evC" firstAttribute="top" secondItem="c8b-ou-Qc0" secondAttribute="bottom" constant="19" id="RGb-MQ-l2m"/>
+                            <constraint firstItem="vS2-us-aP9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="THY-Ve-WJG"/>
+                            <constraint firstItem="vS2-us-aP9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WBi-ho-xPX"/>
+                            <constraint firstItem="BDb-Ik-PI4" firstAttribute="centerX" secondItem="kNi-F8-evC" secondAttribute="centerX" id="fEI-qe-FDJ"/>
+                            <constraint firstItem="kcx-X5-CBt" firstAttribute="top" secondItem="c8b-ou-Qc0" secondAttribute="bottom" constant="71" id="g2x-XK-f3p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kNi-F8-evC" secondAttribute="trailing" constant="91" id="iDu-V4-Hf1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vS2-us-aP9" secondAttribute="trailing" constant="123" id="m74-I5-nrD"/>
+                            <constraint firstItem="BDb-Ik-PI4" firstAttribute="top" secondItem="kNi-F8-evC" secondAttribute="bottom" constant="82" id="qE7-6n-cKz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fileContent" destination="vS2-us-aP9" id="jIh-p0-8Dm"/>
+                        <outlet property="fileName" destination="kcx-X5-CBt" id="0Vw-1G-2a8"/>
+                        <outlet property="folderName" destination="kNi-F8-evC" id="t8J-JL-36E"/>
+                        <outlet property="folderOrFile" destination="BDb-Ik-PI4" id="990-iP-cB2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="filemenu.and.selection" catalog="system" width="128" height="93"/>
+        <image name="folder" catalog="system" width="128" height="97"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
