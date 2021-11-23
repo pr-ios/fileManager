@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     }
     
     func creatFolder() {
-        folderName.text!
+     
         let fileManager = FileManager.default
         let directoryUrl = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
         let directory = directoryUrl?.appendingPathComponent(folderName.text!)
@@ -48,10 +48,11 @@ class ViewController: UIViewController {
     }
     
     func createFile(){
-        fileName.text!
+
         let fileManager = FileManager.default
         let directoryUrl = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
-        let directory = directoryUrl?.appendingPathComponent(folderName.text!)
+        
+//        directoryUrl?.appendingPathComponent(folderName.text!)
         let creatMyFile = directoryUrl?.appendingPathComponent(folderName.text!).appendingPathComponent(fileName.text! + ".txt")
         let text = fileContent.text!.data(using: .utf8)
         fileManager.createFile(atPath: creatMyFile!.path, contents: text, attributes: nil)
@@ -65,11 +66,14 @@ class ViewController: UIViewController {
         
         if folderOrFile.selectedSegmentIndex == 1 {
             createFile()
-
+            folderName.text = ""
         } else if folderOrFile.selectedSegmentIndex == 0 {
 
             creatFolder()
+            fileName.text = ""
+            fileContent.text = ""
         }
+        
         
         
     }
