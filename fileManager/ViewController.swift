@@ -8,20 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 10
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableFolder.dequeueReusableCell(withIdentifier: "celly") as! FolderNameCell
-////        cell.labelFolder.text = arrayfolder[indexPath.row]
-//        return cell
-//    }
-//
+    
     @IBOutlet weak var tableFolder: UITableView!
     
     let fileManager = FileManager.default
-    let arrayfolder: [String] = []
+    var arrayfolder: [String] = []
     @IBOutlet weak var folderName: UITextField!
     @IBOutlet weak var fileContent: UITextField!
     @IBOutlet weak var fileName: UITextField!
@@ -39,7 +30,7 @@ class ViewController: UIViewController {
         let directory = directoryUrl?.appendingPathComponent(folderName.text!)
         do {
             try fileManager.createDirectory(at: directory!, withIntermediateDirectories: true, attributes: [:])
-            
+
         } catch {
             print("Someting wrong")
             
@@ -67,11 +58,15 @@ class ViewController: UIViewController {
         if folderOrFile.selectedSegmentIndex == 1 {
             createFile()
             folderName.text = ""
+            arrayfolder.append(fileName.text!)
+            tableFolder.reloadData()
         } else if folderOrFile.selectedSegmentIndex == 0 {
 
             creatFolder()
             fileName.text = ""
             fileContent.text = ""
+            arrayfolder.append(folderName.text!)
+            tableFolder.reloadData()
         }
         
         
@@ -80,3 +75,26 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayfolder.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableFolder.dequeueReusableCell(withIdentifier: "cellFolderName") as! FolderNameCell
+        cell.labelFolder.text = arrayfolder[indexPath.row]
+        
+        
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let fileManager = FileManager.default
+        let directoryUrl = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
+        print(directoryUrl!.path)
+        tableFolder.reloadData()
+            }
+    
+}
