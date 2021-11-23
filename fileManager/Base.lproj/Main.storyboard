@@ -52,7 +52,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="ضع محتوى الملف" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vS2-us-aP9">
-                                <rect key="frame" x="124" y="413" width="166" height="70"/>
+                                <rect key="frame" x="91" y="413" width="232" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -101,7 +101,7 @@
                         <constraints>
                             <constraint firstItem="kNi-F8-evC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kcx-X5-CBt" secondAttribute="leading" id="1L2-nj-aki"/>
                             <constraint firstAttribute="bottom" secondItem="Pkj-eC-nvc" secondAttribute="bottom" id="3Xf-v8-csh"/>
-                            <constraint firstItem="vS2-us-aP9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="3y4-V0-EZP"/>
+                            <constraint firstItem="vS2-us-aP9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="91" id="3y4-V0-EZP"/>
                             <constraint firstItem="BDb-Ik-PI4" firstAttribute="top" secondItem="kcx-X5-CBt" secondAttribute="bottom" constant="31" id="6LD-xq-1cJ"/>
                             <constraint firstItem="vS2-us-aP9" firstAttribute="top" secondItem="BDb-Ik-PI4" secondAttribute="bottom" constant="41" id="8Hi-44-ddY"/>
                             <constraint firstItem="kNi-F8-evC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="91" id="Do0-sk-FQM"/>
